@@ -1,5 +1,6 @@
 import React from 'react'
-import { TouchableWithoutFeedback, View, StyleSheet } from 'react-native'
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import { Link } from 'react-router-native'
 import Text from '../components/Text'
 import theme from '../theme'
 
@@ -16,12 +17,12 @@ const styles = StyleSheet.create({
     }
 })
 
-const AppBarTab = () => {
+const AppBarTab = ({ title, destination }) => {
     return (
         <View style={styles.container}>
-            <TouchableWithoutFeedback>
-                <Text style={styles.tabHeading}>Repositories</Text>
-            </TouchableWithoutFeedback>
+            <Link to={destination} component={TouchableOpacity} activeOpacity={0.8}>
+                <Text style={styles.tabHeading}>{title}</Text>
+            </Link>
         </View>
     )
 }
