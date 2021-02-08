@@ -1,8 +1,8 @@
-import React from 'react'
-import { View, StyleSheet, TouchableOpacity } from 'react-native'
-import { Link } from 'react-router-native'
-import Text from '../components/Text'
-import theme from '../theme'
+import React from 'react';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Link } from 'react-router-native';
+import Text from '../components/Text';
+import theme from '../theme';
 
 const styles = StyleSheet.create({
     container: {
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         paddingBottom: 15,
         paddingLeft: 10
     }
-})
+});
 
 const AppBarTab = ({ title, destination }) => {
     return (
@@ -24,7 +24,7 @@ const AppBarTab = ({ title, destination }) => {
                 <Text style={styles.tabHeading}>{title}</Text>
             </Link>
         </View>
-    )
-}
+    );
+};
 
-export default AppBarTab
+export default AppBarTab;

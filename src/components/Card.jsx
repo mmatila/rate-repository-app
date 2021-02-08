@@ -1,7 +1,7 @@
-import React from 'react'
-import { View, Image, StyleSheet } from 'react-native'
-import Text from './Text'
-import theme from '../theme'
+import React from 'react';
+import { View, Image, StyleSheet } from 'react-native';
+import Text from './Text';
+import theme from '../theme';
 
 const cardHeaderStyles = StyleSheet.create({
     container: {
@@ -26,7 +26,7 @@ const cardHeaderStyles = StyleSheet.create({
         flexWrap: 'wrap',
         paddingRight: 100
     }
-})
+});
 
 const CardHeader = ({ item }) => {
     return (
@@ -43,8 +43,8 @@ const CardHeader = ({ item }) => {
             <View>
             </View>
         </View>
-    )
-}
+    );
+};
 
 const cardInfoStyles = StyleSheet.create({
     container: {
@@ -57,15 +57,15 @@ const cardInfoStyles = StyleSheet.create({
         padding: 5,
         borderRadius: 5 / 1.5
     }
-})
+});
 
 const CardInfo = ({ item }) => {
     return (
         <View style={cardInfoStyles.container}>
             <Text style={cardInfoStyles.language} >{item.language}</Text>
         </View>
-    )
-}
+    );
+};
 
 const cardFooterStyles = StyleSheet.create({
     container: {
@@ -79,13 +79,13 @@ const cardFooterStyles = StyleSheet.create({
     itemHeader: {
         fontWeight: theme.fontWeights.bold
     }
-})
+});
 
 const CardFooter = ({ item }) => {
 
     const checkCount = (number) => {
-        return number <= 1000 ? number : (number / 1000).toFixed(1) + 'k'
-    }
+        return number <= 1000 ? number : (number / 1000).toFixed(1) + 'k';
+    };
 
     return (
         <View style={cardFooterStyles.container}>
@@ -106,8 +106,8 @@ const CardFooter = ({ item }) => {
                 <Text>Rating</Text>
             </View>
         </View>
-    )
-}
+    );
+};
 
 const cardStyles = StyleSheet.create({
     container: {
@@ -115,7 +115,7 @@ const cardStyles = StyleSheet.create({
         backgroundColor: 'white',
         padding: 10
     }
-})
+});
 
 const Card = ({ item }) => {
     return (
@@ -124,7 +124,7 @@ const Card = ({ item }) => {
             <CardInfo item={item} />
             <CardFooter item={item} />
         </View>
-    )
-}
+    );
+};
 
-export default Card
+export default Card;
