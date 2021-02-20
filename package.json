@@ -23,7 +23,8 @@
     "react-native-paper": "^4.7.1",
     "react-native-web": "~0.11.7",
     "react-router-native": "^5.2.0",
-    "yup": "^0.32.8"
+    "yup": "^0.32.8",
+    "@react-native-community/async-storage": "~1.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
